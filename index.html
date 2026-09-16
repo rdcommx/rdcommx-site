@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RDCOMMX – Network Installation Services, Orlando FL</title>
+  <meta name="description" content="RDCOMMX is a network installation subcontractor based in Orlando, Florida. Fiber splicing, aerial and buried cabling, OTDR testing, HFC and MDU projects.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand">
+        <img src="assets/logo-dark.png" alt="RDCOMMX" width="150" height="77">
+      </a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="wrap">
+        <h1>Network installation done right.</h1>
+        <a href="#contact" class="btn">Get in touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="wrap narrow">
+        <h2>About us</h2>
+        <p>
+          RDCOMMX is a network installation subcontractor working on aerial and
+          underground builds, splicing and testing for broadband projects across
+          the United States.
+        </p>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="wrap">
+        <h2>What we do</h2>
+        <ul class="services">
+          <li>
+            <h3>Fiber splicing</h3>
+            <p>Fusion splicing for backbone, distribution and drop cables.</p>
+          </li>
+          <li>
+            <h3>Aerial &amp; buried cabling</h3>
+            <p>Strand, lashing, directional bore and trench placement.</p>
+          </li>
+          <li>
+            <h3>OTDR testing</h3>
+            <p>Loss and OTDR testing with full documentation on every link.</p>
+          </li>
+          <li>
+            <h3>FTTx OSP &amp; ISP</h3>
+            <p>Outside and inside plant construction for fiber-to-the-home builds.</p>
+          </li>
+          <li>
+            <h3>HFC projects</h3>
+            <p>Hybrid fiber-coax node splits, upgrades and maintenance.</p>
+          </li>
+          <li>
+            <h3>MDU projects</h3>
+            <p>Apartment and multi-dwelling building wiring and activation.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Contact</h2>
+          <address>
+            <strong>RDCOMMX</strong><br>
+            5301 Conroy Road<br>
+            Orlando, FL 32811
+          </address>
+          <p>
+            <a href="tel:+13053403220">+1 (305) 340-3220</a><br>
+            <a href="mailto:contact@rdcommx.com">contact@rdcommx.com</a>
+          </p>
+          <p class="muted">
+            Monday to Friday, 9 am – 4 pm<br>
+            Saturday, 9 am – 3 pm
+          </p>
+        </div>
+
+        <!--
+          Contact form. Before publishing, create a free form at https://formspree.io
+          pointing to contact@rdcommx.com and replace YOUR_FORM_ID below with the ID
+          Formspree gives you. Until then the form falls back to opening the mail app.
+        -->
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label>
+            Name
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-note muted" hidden></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; <span id="year"></span> RDCOMMX. Orlando, Florida.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // If the Formspree ID has not been set yet, fall back to a mailto link
+    // so the form still works in the preview.
+    var form = document.querySelector('.contact-form');
+    if (form && form.action.indexOf('YOUR_FORM_ID') !== -1) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var d = new FormData(form);
+        var body = 'Name: ' + d.get('name') + '\nEmail: ' + d.get('email') + '\n\n' + d.get('message');
+        window.location.href = 'mailto:contact@rdcommx.com?subject=' +
+          encodeURIComponent('Website contact from ' + d.get('name')) +
+          '&body=' + encodeURIComponent(body);
+      });
+    }
+  </script>
+</body>
+</html>
